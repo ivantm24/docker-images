@@ -19,5 +19,6 @@ TAG=${PARTS[1]}
 
 echo "${REPO}"
 echo $TAG
-docker build . -f $FILE -t "${REPO}:${TAG}"
-docker push "ivantm24/${REPO}:${TAG}"
+IMAGE="ivantm24/${REPO}:${TAG}"
+docker build . -f $FILE -t "$IMAGE"
+docker push "$IMAGE"
